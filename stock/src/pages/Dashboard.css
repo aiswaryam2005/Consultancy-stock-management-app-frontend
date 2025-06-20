@@ -1,0 +1,44 @@
+.dashboard-container {
+  padding: 20px;
+}
+
+.dashboard-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.stat-cards-row {
+  display: flex;
+  flex-wrap: wrap; /* optional for responsiveness */
+  gap: 20px;
+}
+
+.stat-card {
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  padding: 15px;
+  flex: 1 1 22%; /* adjust width to fit 4 in one row */
+  min-width: 220px;
+  max-width: 280px;
+  text-align: center;
+}
+
+.value {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.progress {
+  height: 6px;
+  background-color: #f0f0f0;
+  margin: 10px 0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress > div {
+  height: 100%;
+  background-color: #000000;
+}

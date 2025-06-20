@@ -1,0 +1,87 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #fff;
+  padding: 30px 32px; /* More balanced left/right padding */
+  border-radius: 10px;
+  width: 480px;
+  max-width: 90%;
+  box-sizing: border-box; /* Prevent content overflow */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal h3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal input,
+.modal select {
+  margin-bottom: 14px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.modal-buttons button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.modal-buttons .save-btn {
+  background-color: #0d1117;
+  color: #fff;
+}
+
+.modal-buttons .cancel-btn {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+/* Optional mobile responsiveness */
+@media (max-width: 480px) {
+  .modal {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .modal-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .modal-buttons button {
+    width: 100%;
+  }
+}

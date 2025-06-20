@@ -1,0 +1,263 @@
+/* Container */
+.dealers-container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #111827; /* Dark gray */
+}
+
+/* Header with title and add button */
+.dealers-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.dealers-header h2 {
+  font-weight: 700;
+  font-size: 28px;
+  margin: 0;
+}
+
+.dealers-header button {
+  background-color: #000000; /* Dark navy */
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dealers-header button:hover {
+  background-color: #1e293b; /* Slightly lighter navy */
+}
+
+/* Grid layout for dealer cards */
+.dealer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 24px;
+}
+
+/* Dealer card styling */
+.dealer-card {
+  background-color: #fff;
+  border: 1px solid #e5e7eb; /* Light gray border */
+  border-radius: 12px;
+  padding: 20px 24px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: box-shadow 0.3s ease;
+}
+
+.dealer-card:hover {
+  box-shadow: 0 6px 18px rgb(0 0 0 / 0.1);
+}
+
+/* Dealer name */
+.dealer-card h3 {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 6px;
+  color: #111827;
+}
+
+/* Contact name bold */
+.dealer-card p strong {
+  font-weight: 600;
+  color: #374151; /* Dark gray */
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* Dealer info lines */
+.dealer-card p {
+  font-size: 14px;
+  color: #6b7280; /* Medium gray */
+  margin: 2px 0;
+}
+
+/* Product tags container */
+.product-tags {
+  margin-top: 14px;
+  margin-bottom: 16px;
+}
+
+/* Individual tags */
+.tag {
+  display: inline-block;
+  background-color: #f3f4f6; /* Light gray background */
+  color: #374151;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 12px;
+  border-radius: 12px;
+  margin-right: 6px;
+  margin-bottom: 6px;
+  user-select: none;
+  cursor: default;
+}
+
+/* Buttons container */
+.dealer-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* Dealer card buttons */
+.dealer-actions button {
+  flex: 1;
+  background-color: #070606;
+  border: 1.5px solid #e5e7eb;
+  color: white;
+  border-radius: 8px;
+  padding: 10px 0;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dealer-actions button:hover {
+  background-color: #0f172a;
+  color: white;
+  border-color: #0f172a;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal box */
+.modal {
+  background-color: white;
+  border-radius: 12px;
+  padding: 24px 30px;
+  width: 100%;
+  max-width: 460px;
+  box-shadow: 0 4px 24px rgb(0 0 0 / 0.15);
+  display: flex;
+  flex-direction: column;
+}
+
+.modal h3 {
+  margin-bottom: 18px;
+  font-weight: 700;
+  font-size: 22px;
+  color: #111827;
+}
+
+/* Modal form inputs */
+.modal form input,
+.modal form select {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  font-size: 15px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 8px;
+  outline-offset: 2px;
+  transition: border-color 0.3s ease;
+}
+
+.modal form input:focus,
+.modal form select:focus {
+  border-color: #0f172a;
+}
+
+/* Modal buttons container */
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+/* Modal buttons */
+.modal-actions button,
+.modal button[type="submit"] {
+  padding: 10px 22px;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.modal-actions button {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+.modal-actions button:hover {
+  background-color: #d1d5db;
+}
+
+.modal button[type="submit"] {
+  background-color: #0f172a;
+  color: white;
+}
+
+.modal button[type="submit"]:hover {
+  background-color: #1e293b;
+}
+
+/* Close button */
+.close-button {
+  margin-top: 14px;
+  padding: 10px 0;
+  background-color: #e5e7eb;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #374151;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+  background-color: #d1d5db;
+}
+
+/* Orders list */
+.order-list {
+  list-style: none;
+  padding-left: 0;
+  max-height: 160px;
+  overflow-y: auto;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.order-list li {
+  padding: 6px 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  .dealers-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .dealer-actions {
+    flex-direction: column;
+  }
+}
