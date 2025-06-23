@@ -14,7 +14,7 @@ const Profit = () => {
 
   const fetchProfitData = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/profit");
+      const res = await axios.get("https://consultancy-stock-management-app-backend.onrender.com/api/profit");
       const profitData = res.data;
 
       setSummaries(profitData);
@@ -30,7 +30,7 @@ const Profit = () => {
 
   const generateTodaySummary = async () => {
     try {
-      await axios.post("http://localhost:5000/api/generate-today");
+      await axios.post("https://consultancy-stock-management-app-backend.onrender.com/api/generate-today");
       await fetchProfitData(); // refresh summaries
     } catch (err) {
       console.error("Error generating today's profit summary:", err);

@@ -16,7 +16,7 @@ const Services = () => {
 
   const fetchServices = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/services", {
+      const res = await axios.get("https://consultancy-stock-management-app-backend.onrender.com/api/services", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -40,13 +40,13 @@ const Services = () => {
   const handleSave = async (data) => {
     try {
       if (data._id) {
-        await axios.put(`http://localhost:5000/api/services/${data._id}`, data, {
+        await axios.put(`https://consultancy-stock-management-app-backend.onrender.com/api/services/${data._id}`, data, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
         });
       } else {
-        await axios.post("http://localhost:5000/api/services", data, {
+        await axios.post("https://consultancy-stock-management-app-backend.onrender.com/api/services", data, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -61,7 +61,7 @@ const Services = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/services/${id}`, {
+      await axios.delete(`https://consultancy-stock-management-app-backend.onrender.com/api/services/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

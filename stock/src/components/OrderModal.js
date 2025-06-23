@@ -17,7 +17,7 @@ const OrderModal = ({ dealer, onClose, orders, refreshOrders }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post(`http://localhost:5000/api/dealers/${dealer._id}/orders`, formData);
+    await axios.post(`https://consultancy-stock-management-app-backend.onrender.com/api/dealers/${dealer._id}/orders`, formData);
     setFormData({
       product: "",
       quantity: "",

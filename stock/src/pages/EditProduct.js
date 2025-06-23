@@ -13,7 +13,7 @@ function EditProduct() {
     const fetchProduct = async () => {
       try {
         const token = localStorage.getItem("token");
-        const res = await axios.get(`http://localhost:5000/api/products/${id}`, {
+        const res = await axios.get(`https://consultancy-stock-management-app-backend.onrender.com/api/products/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setProduct(res.data);
@@ -35,7 +35,7 @@ function EditProduct() {
     e.preventDefault();
     try {
       const token = localStorage.getItem("token");
-      await axios.put(`http://localhost:5000/api/products/${id}`, product, {
+      await axios.put(`https://consultancy-stock-management-app-backend.onrender.com/api/products/${id}`, product, {
         headers: { Authorization: `Bearer ${token}` },
       });
       navigate("/inventory");

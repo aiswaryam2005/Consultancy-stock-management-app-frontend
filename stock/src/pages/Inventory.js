@@ -12,7 +12,7 @@ const Inventory = () => {
   const fetchProducts = async () => {
     try {
       const token = localStorage.getItem("token");
-      const res = await axios.get("http://localhost:5000/api/products", {
+      const res = await axios.get("https://consultancy-stock-management-app-backend.onrender.com/api/products", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setProducts(res.data);
@@ -28,7 +28,7 @@ const Inventory = () => {
   const handleDelete = async (id) => {
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:5000/api/products/${id}`, {
+      await axios.delete(`https://consultancy-stock-management-app-backend.onrender.com/api/products/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       fetchProducts();
@@ -41,8 +41,8 @@ const Inventory = () => {
     e.preventDefault();
     const token = localStorage.getItem("token");
     const url = editingProduct?._id
-      ? `http://localhost:5000/api/products/${editingProduct._id}`
-      : "http://localhost:5000/api/products";
+      ? `https://consultancy-stock-management-app-backend.onrender.com/api/products/${editingProduct._id}`
+      : "https://consultancy-stock-management-app-backend.onrender.com/api/products";
     const method = editingProduct?._id ? "put" : "post";
 
     try {

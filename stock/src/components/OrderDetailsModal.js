@@ -29,7 +29,7 @@ const OrderDetailsModal = ({ dealer, orders, onClose, refreshOrders }) => {
 
   const saveEdit = async () => {
   try {
-    await axios.put(`http://localhost:5000/api/dealers/${dealer._id}/orders/${editingOrderId}`, editData);
+    await axios.put(`https://consultancy-stock-management-app-backend.onrender.com/api/dealers/${dealer._id}/orders/${editingOrderId}`, editData);
     setEditingOrderId(null);
     refreshOrders();
   } catch (error) {
@@ -40,7 +40,7 @@ const OrderDetailsModal = ({ dealer, orders, onClose, refreshOrders }) => {
 
   const deleteOrder = async (id) => {
   try {
-    await axios.delete(`http://localhost:5000/api/dealers/${dealer._id}/orders/${id}`);
+    await axios.delete(`https://consultancy-stock-management-app-backend.onrender.com/api/dealers/${dealer._id}/orders/${id}`);
     refreshOrders();
   } catch (error) {
     console.error("Failed to delete order:", error.response?.data || error.message);

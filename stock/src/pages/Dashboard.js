@@ -14,7 +14,7 @@ function Dashboard() {
   const fetchStats = async () => {
     const token = localStorage.getItem("token");
     try {
-      const res = await axios.get("http://localhost:5000/api/stats", {
+      const res = await axios.get("https://consultancy-stock-management-app-backend.onrender.com/api/stats", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setStats(res.data);

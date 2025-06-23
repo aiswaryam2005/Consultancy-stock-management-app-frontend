@@ -15,7 +15,7 @@ const Sales = () => {
 
   const fetchSales = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/sales");
+      const res = await axios.get("https://consultancy-stock-management-app-backend.onrender.com/api/sales");
       setSales(res.data);
     } catch (err) {
       console.error("Failed to fetch sales", err);
@@ -35,9 +35,9 @@ const Sales = () => {
   const handleSave = async (data) => {
     try {
       if (data._id) {
-        await axios.put(`http://localhost:5000/api/sales/${data._id}`, data);
+        await axios.put(`https://consultancy-stock-management-app-backend.onrender.com/api/sales/${data._id}`, data);
       } else {
-        await axios.post("http://localhost:5000/api/sales", data);
+        await axios.post("https://consultancy-stock-management-app-backend.onrender.com/api/sales", data);
       }
       fetchSales();
       setModalOpen(false);
@@ -48,7 +48,7 @@ const Sales = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/sales/${id}`);
+      await axios.delete(`https://consultancy-stock-management-app-backend.onrender.com/api/sales/${id}`);
       fetchSales();
     } catch (err) {
       console.error("Failed to delete sale", err);

@@ -22,7 +22,7 @@ const Dealers = () => {
 
   const fetchDealers = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/dealers");
+      const res = await axios.get("https://consultancy-stock-management-app-backend.onrender.com/api/dealers");
       setDealers(res.data);
     } catch (err) {
       console.error("Failed to fetch dealers:", err);
@@ -31,7 +31,7 @@ const Dealers = () => {
 
   const fetchOrders = async (dealerId) => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/dealers/${dealerId}/orders`);
+      const res = await axios.get(`https://consultancy-stock-management-app-backend.onrender.com/api/dealers/${dealerId}/orders`);
       setOrders(res.data);
     } catch (err) {
       console.error("Failed to fetch orders:", err);
@@ -46,9 +46,9 @@ const Dealers = () => {
   const handleSaveDealer = async (dealer) => {
     try {
       if (dealer._id) {
-        await axios.put(`http://localhost:5000/api/dealers/${dealer._id}`, dealer);
+        await axios.put(`https://consultancy-stock-management-app-backend.onrender.com/api/dealers/${dealer._id}`, dealer);
       } else {
-        await axios.post("http://localhost:5000/api/dealers", dealer);
+        await axios.post("https://consultancy-stock-management-app-backend.onrender.com/api/dealers", dealer);
       }
       fetchDealers();
       setShowDealerModal(false);
@@ -59,7 +59,7 @@ const Dealers = () => {
 
   const handleDeleteDealer = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/dealers/${id}`);
+      await axios.delete(`https://consultancy-stock-management-app-backend.onrender.com/api/dealers/${id}`);
       fetchDealers();
     } catch (err) {
       console.error("Failed to delete dealer:", err);

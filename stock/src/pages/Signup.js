@@ -13,7 +13,7 @@ function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/signup", form);
+      await axios.post("https://consultancy-stock-management-app-backend.onrender.com/api/signup", form);
       alert("Signup successful");
       navigate("/dashboard");
     } catch (err) {

@@ -23,7 +23,7 @@ function AddProduct() {
     e.preventDefault();
     try {
       const token = localStorage.getItem("token");
-      await axios.post("http://localhost:5000/api/products", product, {
+      await axios.post("https://consultancy-stock-management-app-backend.onrender.com/api/products", product, {
         headers: { Authorization: `Bearer ${token}` },
       });
       navigate("/inventory");
